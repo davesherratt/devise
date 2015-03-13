@@ -1,5 +1,5 @@
 # All Devise controllers are inherited from here.
-class DeviseController < Devise.parent_controller.constantize
+class DeviseController.class_eval < Devise.parent_controller.constantize
   include Devise::Controllers::ScopedViews
 
   helper DeviseHelper
